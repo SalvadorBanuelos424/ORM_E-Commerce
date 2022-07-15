@@ -15,11 +15,18 @@ Product.init(
       primaryKey: true,
       autoIncrement: true,
     },
-    product_name: {//plain T-shirt
+    product_name: { // plain T-shirt
       type: DataTypes.STRING,
       allowNull: false,
     },
-    stock: {//14
+    price: { // 14.99
+      type: DataTypes.DECIMAL,
+      allowNull: false,
+      validate: {  
+        isDecimal: true,
+      },
+    },
+    stock: { // 14
       type: DataTypes.INTEGER,
       allowNull: false,
       defaultValue: 10,
@@ -27,7 +34,7 @@ Product.init(
         isNumber: true,
       },
     },
-    category_id: {//1
+    category_id: { // 1
       type: DataTypes.INTEGER,
       allowNull: false,
       references: {

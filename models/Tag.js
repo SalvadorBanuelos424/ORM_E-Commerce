@@ -13,7 +13,7 @@ Tag.init(
       primaryKey: true,
       autoIncrement: true,
     },
-    tag_name: {//rock music
+    tag_name: { // rock music
       type: DataTypes.STRING,
     },
   },

@@ -2,8 +2,6 @@ const router = require('express').Router();
 const { Product, Category, Tag, ProductTag } = require('../../models');
 
 // The `/api/products` endpoint
-
-
 // get all products, find all products, be sure to include its associated Category and Tag data
 router.get('/', (req, res) => {
   ProductTag.findAll({
@@ -22,7 +20,6 @@ router.get('/', (req, res) => {
     res.status(500).json(err);
   });
 });
-
 
 // get one product, find a single product by its `id`, be sure to include its associated Category and Tag data
 router.get('/:id', (req, res) => {
@@ -81,7 +78,6 @@ router.post('/', (req, res) => {
     });
 });
 
-
 // update product data, find all associated tags from ProductTag, get list of current tag_ids, create filtered list of new tag_ids, figure out which ones to remove, figure out which ones to remove, run both actions, console.log(err);
 router.put('/:id', (req, res) => {
   Product.update(req.body, {
@@ -116,7 +112,6 @@ router.put('/:id', (req, res) => {
       res.status(400).json(err);
     });
 });
-
 
 // delete one product by its `id` value
 router.delete('/:id', (req, res) => {
