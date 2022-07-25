@@ -4,11 +4,9 @@ const { Product, Category, Tag, ProductTag } = require('../../models');
 // The `/api/products` endpoint
 // get all products, find all products, be sure to include its associated Category and Tag data
 router.get('/', (req, res) => {
-  ProductTag.findAll({
-    includes: [
-      {
-        model: Category
-      },
+  Product.findAll({
+    include: [
+      Category,
       {
         model: Tag,
         through: ProductTag
@@ -23,14 +21,12 @@ router.get('/', (req, res) => {
 
 // get one product, find a single product by its `id`, be sure to include its associated Category and Tag data
 router.get('/:id', (req, res) => {
-  ProductTag.findOne({
+  Product.findOne({
     where: {
       id: req.params.id
     },
     include: [
-      {
-        model: Category,
-      },
+      Category,
       {
         model: Tag,
         through: ProductTag
@@ -115,9 +111,9 @@ router.put('/:id', (req, res) => {
 
 // delete one product by its `id` value
 router.delete('/:id', (req, res) => {
-  ProductTag.destroy({
+  Product.destroy({
     where: { 
-      id: productTagsToDelete
+      id: req.params.id
     }
   })
   .then(dbProductData => {

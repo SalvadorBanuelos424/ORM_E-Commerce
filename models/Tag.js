@@ -11,10 +11,10 @@ Tag.init(
       type: DataTypes.INTEGER,
       allowNull: false,
       primaryKey: true,
-      autoIncrement: true,
+      autoIncrement: true
     },
     tag_name: { // rock music
-      type: DataTypes.STRING,
+      type: DataTypes.STRING
     },
   },
   {

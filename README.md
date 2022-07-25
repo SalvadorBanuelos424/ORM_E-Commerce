@@ -1,12 +1,12 @@
-# Employee Tracker MySQL, Inc,
+# ORM_E-Commerce, Inc,
 https://github.com/SalvadorBanuelos424/ORM_E-Commerce
 
 ![Badge](https://img.shields.io/badge/License-${license}-blue)
 
 ## Description
-E-commerce is extremely important to businesses and business customers, it connects marketplaces to people.  This app connects the backend (server-side) to the potential client-side (frontend).  Utilize Rest API's and Sequelize-MySQL to manipulate this e-commerce database. 
+E-commerce is a pivotal field for potential Web developers.  Connect clients with database content using API routes.  Know whats in stock, for how much, in what color, its never been easier to keep customers informs.  This App demonstrates the ingenuity of REST APIs, view, post, update and even delete the database from client side Insomnia with ease. 
  
- ![image of application](./assets/img/insomnia.jpg)
+ ![image of application](./assets/image/ORMreadme.jpg)
 
  ## Table of Contents
   - [Description](#description)
@@ -21,23 +21,21 @@ E-commerce is extremely important to businesses and business customers, it conne
   - [Email](#email)
   
 ## Installation
-Clone git repository, type in terminal "npm i" to install node-modules
+Clone git repository, type in terminal "npm i" to install node-modules.
+in terminal type "mysql -u root -p" then password "3149".
+type in mysql CLI "use ecommerce_db;" to choose the database, 
+type "\q" to exit back into terminal
+type "npm run seed" to set database seeds
+type "npm start" then localhost3000 in Insomnia to follow all transactions.
 
 ## Built With 
 * JS
 * Node.js
 * JSON
 * MySQL2
-* Inquirer
-* Express
-* Sequelize
-
-## Usage
-After installing node-modules, type in terminal "mysql -u root -p" and "<password>" to enter MySql.
-Then type in mysql terminal "source db/schema.sql;" and then "/q" to connect schema.sql.
-Then type in terminal "npm run seed" to seed database, finally type in terminal "npm start" in order to localhost to Insomnia.
-
-Insomnia will allow you to Test and Validate RESTful API applications.
+* dotenv
+* express
+* sequelize
 
 ## License
 This program is licensed by MIT.
@@ -58,4 +56,4 @@ Feel free to reach out GitHub or email if you have any questions
 * SBanuelos1234@gmail.com
 
 Made with ❤️ by Salvador Banuelos
-### © 2022 Employee Tracker MySQL, Inc.
+### © 2022 ORM_E-Commerce, Inc.
